@@ -9,6 +9,13 @@
   padding: 0.714rem;
   width: 100%;
 
+  &.terraClinical-SubsectionHeader {
+    background-color: #9c7b7b !important;
+    border-bottom-color: #dedfe0 !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+  }
+
   .terraClinical-Header-title {
     font-size: 1.285rem;
     font-weight: normal;

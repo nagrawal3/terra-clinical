@@ -20,18 +20,25 @@ const propTypes = {
    * Content to be displayed at the end of the header
    **/
   endContent: PropTypes.element,
+
+  /**
+   * A Boolean indicating if the header is a subsection header. Default is false
+   **/
+  isSubsection: PropTypes.bool,
 };
 
 const defaultProps = {
   title: '',
   startContent: null,
   endContent: null,
+  isSubsection: false,
 };
 
-const Header = ({ title, startContent, endContent, ...customProps }) => {
+const Header = ({ title, startContent, endContent, isSubsection, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
   const headerClassNames = classNames([
     'terraClinical-Header',
+    { 'terraClinical-SubsectionHeader': isSubsection },
     attributes.className,
   ]);
 

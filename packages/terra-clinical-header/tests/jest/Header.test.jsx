@@ -31,3 +31,15 @@ it('should render a header with all content', () => {
   ));
   expect(header).toMatchSnapshot();
 });
+
+it('should render a subsection header with all content', () => {
+  const header = shallow((
+    <Header
+      startContent={<div>start content</div>}
+      title="Title"
+      endContent={<div>end content</div>}
+      isSubsection
+    />
+  ));
+  expect(header).toMatchSnapshot();
+});

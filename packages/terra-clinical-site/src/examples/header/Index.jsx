@@ -12,6 +12,7 @@ import HeaderSrc from '!raw-loader!terra-clinical-header/src/Header';
 // Example Files
 import TitleHeader from './TitleHeader';
 import ContentHeader from './ContentHeader';
+import SubsectionHeader from './SubsectionHeader';
 
 const HeaderExamples = () => (
   <div>
@@ -22,6 +23,8 @@ const HeaderExamples = () => (
     <TitleHeader />
     <h1> Header With Content </h1>
     <ContentHeader />
+    <h1> Subsection Header with content </h1>
+    <SubsectionHeader />
   </div>
 );
 

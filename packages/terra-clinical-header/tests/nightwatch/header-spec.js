@@ -15,6 +15,7 @@ module.exports = {
   'Displays a default header with no content': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/header-tests/default`);
     browser.expect.element('.terraClinical-Header').to.be.present;
+    browser.expect.element('.terraClinical-SubsectionHeader').to.not.be.present;
   },
   'Displays a header with a title only': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/header-tests/title`);
@@ -34,6 +35,12 @@ module.exports = {
   },
   'Displays a header with content on the left and right': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/header-tests/left-and-right-content`);
+    browser.expect.element('.terraClinical-HeaderTest--startContent').to.be.present;
+    browser.expect.element('.terraClinical-HeaderTest--endContent').to.be.present;
+  },
+  'Displays a subsection header with content on the left and right': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/header-tests/left-and-right-content-subsection`);
+    browser.expect.element('.terraClinical-SubsectionHeader').to.be.present;
     browser.expect.element('.terraClinical-HeaderTest--startContent').to.be.present;
     browser.expect.element('.terraClinical-HeaderTest--endContent').to.be.present;
   },
